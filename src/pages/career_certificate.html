@@ -1,1432 +1,1004 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="/src/assets/favicon.svg"
-      type="image/svg+xml"
-    />
-    <title>Web Development | Neon Labs</title>
-    <link href="../output.css" rel="stylesheet" />
-    <style>
-      /* Custom Keyframes for Animations */
-      @keyframes slideUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
 
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/src/assets/favicon.svg" type="image/svg+xml" />
+  <title>Career certificate | Neon Labs</title>
+  <link href="../output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style/web_course.css">
+</head>
 
-      .animate-slide-up {
-        animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      }
-
-      .animate-slide-up-delayed {
-        opacity: 0;
-        animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
-      }
-
-      .animate-fade-in {
-        opacity: 0;
-        animation: fadeIn 1s ease-out 0.4s forwards;
-      }
-
-      @keyframes fadeIn {
-        to {
-          opacity: 1;
-        }
-      }
-
-      /* Subtle bounce for the floating badge */
-      @keyframes bounceSubtle {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-
-        50% {
-          transform: translateY(-10px);
-        }
-      }
-
-      .animate-bounce-subtle {
-        animation: bounceSubtle 4s ease-in-out infinite;
-      }
-    </style>
-  </head>
-
-  <body
-    class="bg-white dark:bg-slate-950 transition-colors duration-500 font-sans"
-  >
-    <!-- header -->
-    <header>
-      <nav
-        class="fixed top-0 start-0 w-full z-50 bg-blue-950/95 backdrop-blur-xl border-b border-white/5"
-      >
-        <div
-          class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-2 px-4 md:p-3 md:px-6"
-        >
-          <a href="#" class="flex items-center space-x-2 group">
-            <div
-              class="bg-cyan-500 p-1.5 rounded-lg group-hover:shadow-[0_0_20px_rgba(6,182,212,0.5)] transition-all"
-            >
-              <svg
-                class="w-5 h-5 text-blue-950"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="3"
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                ></path>
-              </svg>
-            </div>
-            <span
-              class="text-lg font-black tracking-tighter text-white uppercase italic"
-              >NEON<span class="text-cyan-400">LABS</span></span
-            >
-          </a>
-
-          <div class="flex md:hidden items-center space-x-3">
-            <button class="text-slate-400 hover:text-cyan-400">
-              <svg
-                class="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                ></path>
-              </svg>
-            </button>
-            <button id="menu-toggle" class="text-white p-1.5">
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                ></path>
-              </svg>
-            </button>
+<body class="bg-white dark:bg-slate-950 transition-colors duration-500 font-sans">
+  <!-- header -->
+  <header>
+    <nav class="fixed top-0 start-0 w-full z-50 bg-blue-950/95 backdrop-blur-xl border-b border-white/5">
+      <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-2 px-4 md:p-3 md:px-6">
+        <a href="#" class="flex items-center space-x-2 group">
+          <div class="bg-cyan-500 p-1.5 rounded-lg group-hover:shadow-[0_0_20px_rgba(6,182,212,0.5)] transition-all">
+            <svg class="w-5 h-5 text-blue-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 10V3L4 14h7v7l9-11h-7z">
+              </path>
+            </svg>
           </div>
+          <span class="text-lg font-black tracking-tighter text-white uppercase italic">NEON<span
+              class="text-cyan-400">LABS</span></span>
+        </a>
 
-          <div
-            id="navbar-menu"
-            class="hidden w-full md:flex md:w-auto md:order-1 items-center"
-          >
-            <ul
-              class="flex flex-col p-4 md:flex-row md:space-x-1 md:mt-0 md:p-0 font-bold items-center"
-            >
-              <li>
-                <a
-                  href="/src/index.html"
-                  class="px-4 py-2 text-[11px] text-white bg-white/5 rounded-full uppercase tracking-widest"
-                  >Home</a
-                >
-              </li>
+        <div class="flex md:hidden items-center space-x-3">
+          <button class="text-slate-400 hover:text-cyan-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </button>
+          <button id="menu-toggle" class="text-white p-1.5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
 
-              <li class="relative group">
-                <button
-                  id="courses-btn"
-                  class="flex items-center px-4 py-2 text-[11px] text-slate-300 hover:text-white hover:bg-white/5 rounded-full uppercase tracking-widest transition-all"
-                >
-                  Courses
-                  <svg
-                    class="w-2.5 h-2.5 ms-1.5 opacity-50 transition-transform group-hover:rotate-180"
-                    fill="none"
-                    viewBox="0 0 10 6"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="m1 1 4 4 4-4"
-                    />
-                  </svg>
-                </button>
-                <div
-                  id="courses-menu"
-                  class="hidden md:absolute top-full left-0 bg-blue-900/95 border border-white/10 rounded-2xl shadow-2xl w-64 mt-3 p-3 z-50"
-                >
-                  <p
-                    class="text-[9px] text-cyan-400 uppercase tracking-[0.2em] mb-2 px-3"
-                  >
-                    Top Categories
-                  </p>
-                  <a
-                    href="/src/pages/web_course.html"
-                    class="flex flex-col px-3 py-2 hover:bg-white/5 rounded-xl transition-all"
-                  >
-                    <span class="text-white text-xs">Web Development</span>
-                    <span class="text-[10px] text-slate-400 font-normal"
-                      >React, Node, Next.js</span
-                    >
-                  </a>
-                  <a
-                    href="/src/pages/data_sciense.html"
-                    class="flex flex-col px-3 py-2 hover:bg-white/5 rounded-xl transition-all"
-                  >
-                    <span class="text-white text-xs">Data Science</span>
-                    <span class="text-[10px] text-slate-400 font-normal"
-                      >Python, AI, ML</span
-                    >
-                  </a>
-                </div>
-              </li>
+        <div id="navbar-menu" class="hidden w-full md:flex md:w-auto md:order-1 items-center">
+          <ul class="flex flex-col p-4 md:flex-row md:space-x-1 md:mt-0 md:p-0 font-bold items-center">
+            <li>
+              <a href="/src/index.html"
+                class="px-4 py-2 text-[11px] text-white bg-white/5 rounded-full uppercase tracking-widest">Home</a>
+            </li>
 
-              <li class="relative group">
-                <button
-                  id="programs-btn"
-                  class="flex items-center px-4 py-2 text-[11px] text-slate-300 hover:text-white hover:bg-white/5 rounded-full uppercase tracking-widest transition-all"
-                >
-                  Programs
-                  <svg
-                    class="w-2.5 h-2.5 ms-1.5 opacity-50"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    ></path>
-                  </svg>
-                </button>
-                <div
-                  id="programs-menu"
-                  class="hidden md:absolute top-full left-0 bg-blue-900/95 border border-white/10 rounded-2xl shadow-2xl w-56 mt-3 p-2 z-50"
-                >
-                  <a
-                    href="/src/pages/bootcamp.html"
-                    class="block px-4 py-2 text-xs text-slate-300 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-all"
-                  >
-                    6-months Bootcamp</a
-                  >
-                  <a
-                    href="/src/pages/career_certificate.html"
-                    class="block px-4 py-2 text-xs text-slate-300 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-all"
-                    >Career Certificate</a
-                  >
-                </div>
-              </li>
+            <li class="relative group">
+              <button id="courses-btn"
+                class="flex items-center px-4 py-2 text-[11px] text-slate-300 hover:text-white hover:bg-white/5 rounded-full uppercase tracking-widest transition-all">
+                Courses
+                <svg class="w-2.5 h-2.5 ms-1.5 opacity-50 transition-transform group-hover:rotate-180" fill="none"
+                  viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 4 4 4-4" />
+                </svg>
+              </button>
+              <div id="courses-menu"
+                class="hidden md:absolute top-full left-0 bg-blue-900/95 border border-white/10 rounded-2xl shadow-2xl w-64 mt-3 p-3 z-50">
+                <p class="text-[9px] text-cyan-400 uppercase tracking-[0.2em] mb-2 px-3">
+                  Top Categories
+                </p>
+                <a href="/src/pages/web_course.html"
+                  class="flex flex-col px-3 py-2 hover:bg-white/5 rounded-xl transition-all">
+                  <span class="text-white text-xs">Web Development</span>
+                  <span class="text-[10px] text-slate-400 font-normal">React, Node, Next.js</span>
+                </a>
+                <a href="/src/pages/data_sciense.html"
+                  class="flex flex-col px-3 py-2 hover:bg-white/5 rounded-xl transition-all">
+                  <span class="text-white text-xs">Data Science</span>
+                  <span class="text-[10px] text-slate-400 font-normal">Python, AI, ML</span>
+                </a>
+              </div>
+            </li>
 
-              <li>
-                <a
-                  href="/src/pages/my_learning.html"
-                  class="px-4 py-2 text-[11px] text-slate-300 hover:text-white hover:bg-white/5 rounded-full uppercase tracking-widest transition-all"
-                  >My Learning</a
-                >
-              </li>
-              <li>
+            <li class="relative group">
+              <button id="programs-btn"
+                class="flex items-center px-4 py-2 text-[11px] text-slate-300 hover:text-white hover:bg-white/5 rounded-full uppercase tracking-widest transition-all">
+                Programs
+                <svg class="w-2.5 h-2.5 ms-1.5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div id="programs-menu"
+                class="hidden md:absolute top-full left-0 bg-blue-900/95 border border-white/10 rounded-2xl shadow-2xl w-56 mt-3 p-2 z-50">
+                <a href="/src/pages/bootcamp.html"
+                  class="block px-4 py-2 text-xs text-slate-300 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-all">
+                  6-months Bootcamp</a>
+                <a href="/src/pages/career_certificate.html"
+                  class="block px-4 py-2 text-xs text-slate-300 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-all">Career
+                  Certificate</a>
+              </div>
+            </li>
+
+            <li>
+              <a href="/src/pages/my_learning.html"
+                class="px-4 py-2 text-[11px] text-slate-300 hover:text-white hover:bg-white/5 rounded-full uppercase tracking-widest transition-all">My
+                Learning</a>
+            </li>
+            <!-- <li>
                 <a
                   href="#"
                   class="px-4 py-2 text-[11px] text-slate-300 hover:text-white hover:bg-white/5 rounded-full uppercase tracking-widest transition-all"
                   >Pricing</a
                 >
+              </li> -->
+          </ul>
+
+          <div
+            class="flex flex-col md:flex-row items-center md:ml-4 md:pl-4 md:border-l md:border-white/10 space-y-4 md:space-y-0 md:space-x-4">
+            <div class="flex items-center space-x-4 text-slate-400">
+              <button class="hover:text-cyan-400 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+              </button>
+              <!-- handle the notification button -->
+              <div class="flex justify-end">
+                <button onclick="toggleNotifications()"
+                  class="relative p-2 text-white-600 transition-colors rounded-full dark:bg-gray-800 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  aria-label="View notifications">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                  </svg>
+                  <span
+                    class="absolute top-0 right-0 block w-3 h-3 bg-red-500 border-2 border-white rounded-full dark:border-gray-800"></span>
+                </button>
+              </div>
+
+              <div id="notification-overlay"
+                class="fixed inset-0 z-40 hidden bg-black/50 backdrop-blur-sm transition-opacity"
+                onclick="toggleNotifications()"></div>
+
+              <aside id="notification-sidebar"
+                class="fixed top-0 right-0 z-50 h-screen w-full sm:w-96 transform translate-x-full transition-transform duration-300 ease-in-out bg-white dark:bg-gray-900 border-l border-gray-200 dark:border-gray-800 shadow-xl"
+                aria-labelledby="notification-title">
+                <div class="flex flex-col h-full">
+                  <div class="flex items-center justify-between p-4 border-b dark:border-gray-800">
+                    <h2 id="notification-title" class="text-lg font-semibold text-gray-800 dark:text-white">
+                      Notifications
+                    </h2>
+                    <button onclick="toggleNotifications()"
+                      class="p-2 text-gray-500 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+                      aria-label="Close notifications">
+                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div class="flex-1 overflow-y-auto">
+                    <ul class="divide-y divide-gray-100 dark:divide-gray-800">
+                      <li class="p-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition">
+                        <div class="flex gap-3">
+                          <div
+                            class="flex-shrink-0 w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-blue-600">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                              <path
+                                d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+                            </svg>
+                          </div>
+                          <div class="flex-1">
+                            <p class="text-sm font-medium text-gray-900 dark:text-gray-100">
+                              System Update
+                            </p>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">
+                              Version 2.4 is now available for download.
+                            </p>
+                            <span class="text-[10px] text-blue-500 font-semibold uppercase mt-1 block">2
+                              mins ago</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="p-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition">
+                        <div class="flex gap-3">
+                          <img class="w-10 h-10 rounded-full" src="https://ui-avatars.com/api/?name=John+Doe"
+                            alt="User Avatar" />
+                          <div class="flex-1">
+                            <p class="text-sm text-gray-900 dark:text-gray-100">
+                              <span class="font-bold">John Doe</span>
+                              mentioned you in a comment.
+                            </p>
+                            <span class="text-[10px] text-gray-400 mt-1 block">1 hour
+                              ago</span>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="p-4 border-t dark:border-gray-800 bg-gray-50 dark:bg-gray-900/50">
+                    <a href="#" class="block text-center text-sm font-medium text-blue-600 hover:text-blue-500">View
+                      all
+                      notifications</a>
+                  </div>
+                </div>
+              </aside>
+            </div>
+
+            <div class="flex items-center space-x-4 text-slate-400">
+              <button id="theme-toggle" class="p-2 rounded-lg hover:bg-white/10 transition-colors text-cyan-400">
+                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z">
+                  </path>
+                </svg>
+                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+              </button>
+            </div>
+
+            <div class="flex items-center space-x-3">
+              <a href="/src/pages/signin.html"><button class="text-slate-300 hover:text-white text-[11px] font-bold uppercase tracking-widest">
+                Sign In
+              </button></a>
+              
+              <a href="/src/pages/get_started.html">
+                <button
+                class="bg-cyan-500 hover:bg-white text-blue-950 px-5 py-2 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-lg shadow-cyan-500/20">
+                Get Started
+              </button>
+              </a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- hero section -->
+  <section class="relative overflow-hidden bg-white dark:bg-slate-950 py-16 lg:py-24 transition-colors duration-300">
+    <div class="absolute inset-0 z-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none">
+      <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="it-grid" width="60" height="60" patternUnits="userSpaceOnUse">
+            <path d="M 60 0 L 0 0 0 60" fill="none" stroke="currentColor" stroke-width="0.5" />
+            <circle cx="0" cy="0" r="1.5" fill="currentColor" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#it-grid)" />
+      </svg>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="w-full lg:w-3/5 text-left">
+          <span
+            class="inline-flex items-center px-3 py-1 rounded-md text-xs font-bold tracking-widest uppercase bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 mb-6 border border-emerald-200 dark:border-emerald-800">
+            Industry Recognized Credential
+          </span>
+
+          <h1 class="text-4xl md:text-6xl font-black text-slate-900 dark:text-white leading-tight mb-4">
+            Become an
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">IT Systems
+              Specialist</span>
+          </h1>
+
+          <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl leading-relaxed">
+            Launch your career in technical support, networking, and security.
+            Learn to manage enterprise hardware, configure secure networks,
+            and troubleshoot complex system architectures from scratch.
+          </p>
+
+          <div class="flex flex-wrap gap-4 mb-10">
+            <a href="#enroll"
+              class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow-lg shadow-blue-500/25 transition-all flex items-center gap-2">
+              Start Learning
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+            <button
+              class="px-8 py-4 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-bold rounded-lg hover:bg-slate-50 dark:hover:bg-slate-900 transition-all">
+              Download Syllabus
+            </button>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-slate-200 dark:border-slate-800">
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold mb-1">
+                Time to Finish
+              </p>
+              <p class="text-md font-bold text-slate-800 dark:text-slate-200">
+                ~4 Months
+              </p>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold mb-1">
+                Difficulty
+              </p>
+              <p class="text-md font-bold text-slate-800 dark:text-slate-200">
+                Entry Level
+              </p>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold mb-1">
+                Format
+              </p>
+              <p class="text-md font-bold text-slate-800 dark:text-slate-200">
+                Self-Paced
+              </p>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold mb-1">
+                Hands-on
+              </p>
+              <p class="text-md font-bold text-slate-800 dark:text-slate-200">
+                Virtual Labs
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-2/5 flex justify-center lg:justify-end">
+          <div class="relative group">
+            <div
+              class="w-72 h-96 md:w-80 md:h-[28rem] bg-slate-100 dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl relative overflow-hidden flex flex-col p-4">
+              <div class="bg-black rounded-xl flex-1 p-4 font-mono text-[10px] text-emerald-500 overflow-hidden">
+                <p class="opacity-50">$ systemctl status network</p>
+                <p class="text-white mt-1">● active (running)</p>
+                <p class="mt-2 text-blue-400">
+                  # Initializing secure protocol...
+                </p>
+                <div class="mt-4 w-full bg-slate-800 h-1 rounded overflow-hidden">
+                  <div class="bg-emerald-500 h-full w-2/3"></div>
+                </div>
+                <div class="grid grid-cols-4 gap-2 mt-6">
+                  <div class="h-8 bg-slate-800 rounded animate-pulse"></div>
+                  <div class="h-8 bg-slate-800 rounded animate-pulse"></div>
+                  <div class="h-8 bg-slate-800 rounded animate-pulse"></div>
+                  <div class="h-8 bg-slate-800 rounded"></div>
+                </div>
+              </div>
+              <div class="mt-4 flex justify-between items-center px-2">
+                <div class="flex gap-1">
+                  <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                  <div class="w-2 h-2 rounded-full bg-amber-500"></div>
+                  <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                </div>
+                <span class="text-[10px] font-bold text-slate-500 uppercase tracking-tighter">Terminal V.4.0</span>
+              </div>
+            </div>
+
+            <div
+              class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- skill + curriculum -->
+  <section class="bg-slate-50 dark:bg-slate-900 py-20 transition-colors duration-300">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+          Master the Modern IT Stack
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          Go beyond theory. Gain hands-on experience with the tools that power
+          global enterprise infrastructure.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-1">
+          <h3 class="text-xl font-bold text-slate-800 dark:text-slate-200 mb-6 flex items-center gap-2">
+            <span class="w-8 h-8 rounded bg-blue-600 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </span>
+            Skills you'll gain
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 shadow-sm">Linux
+              CLI</span>
+            <span
+              class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 shadow-sm">Active
+              Directory</span>
+            <span
+              class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 shadow-sm">TCP/IP
+              Networking</span>
+            <span
+              class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 shadow-sm">Cloud
+              Admin (AWS/Azure)</span>
+            <span
+              class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 shadow-sm">Network
+              Security</span>
+            <span
+              class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 shadow-sm">Hardware
+              Troubleshooting</span>
+            <span
+              class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 shadow-sm">Virtualization
+              (VMware)</span>
+          </div>
+
+          <div class="mt-12 p-6 bg-blue-600 rounded-2xl text-white shadow-xl shadow-blue-500/20">
+            <h4 class="font-bold mb-2">Real-World Projects</h4>
+            <ul class="space-y-4 text-sm opacity-90">
+              <li class="flex gap-3">
+                <span class="font-mono bg-blue-400/30 px-1 rounded">01</span>
+                Deploy a secure VPN for a remote workforce.
+              </li>
+              <li class="flex gap-3">
+                <span class="font-mono bg-blue-400/30 px-1 rounded">02</span>
+                Configure an enterprise-grade Firewall & IDS.
+              </li>
+              <li class="flex gap-3">
+                <span class="font-mono bg-blue-400/30 px-1 rounded">03</span>
+                Automate system backups using Python/Bash.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h3 class="text-xl font-bold text-slate-800 dark:text-slate-200 mb-8">
+            Course Curriculum
+          </h3>
+
+          <div class="space-y-4">
+            <details
+              class="group bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden"
+              open>
+              <summary class="flex justify-between items-center p-5 cursor-pointer list-none">
+                <div class="flex items-center gap-4">
+                  <span class="text-blue-600 font-mono font-bold">M1</span>
+                  <h4 class="font-bold text-slate-900 dark:text-white">
+                    Technical Support Fundamentals
+                  </h4>
+                </div>
+                <span class="text-slate-400 transition-transform group-open:rotate-180">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </span>
+              </summary>
+              <div
+                class="p-5 pt-0 text-slate-600 dark:text-slate-400 text-sm border-t border-slate-100 dark:border-slate-700/50">
+                <p class="mb-3">
+                  Master the basics of IT infrastructure, hardware assembly,
+                  and the OSI model.
+                </p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Assembling a Computer</li>
+                  <li>Installing Operating Systems (Windows & Linux)</li>
+                  <li>Understanding the Internet and IP addresses</li>
+                </ul>
+              </div>
+            </details>
+
+            <details
+              class="group bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
+              <summary class="flex justify-between items-center p-5 cursor-pointer list-none">
+                <div class="flex items-center gap-4">
+                  <span class="text-blue-600 font-mono font-bold">M2</span>
+                  <h4 class="font-bold text-slate-900 dark:text-white">
+                    Bits and Bytes of Computer Networking
+                  </h4>
+                </div>
+                <span class="text-slate-400 transition-transform group-open:rotate-180">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </span>
+              </summary>
+              <div
+                class="p-5 pt-0 text-slate-600 dark:text-slate-400 text-sm border-t border-slate-100 dark:border-slate-700/50">
+                <p>
+                  Deep dive into TCP/IP, DNS, and DHCP. Learn to configure
+                  routers and switches in virtual lab environments.
+                </p>
+              </div>
+            </details>
+
+            <details
+              class="group bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
+              <summary class="flex justify-between items-center p-5 cursor-pointer list-none">
+                <div class="flex items-center gap-4">
+                  <span class="text-blue-600 font-mono font-bold">M3</span>
+                  <h4 class="font-bold text-slate-900 dark:text-white">
+                    Operating Systems and You: Becoming a Power User
+                  </h4>
+                </div>
+                <span class="text-slate-400 transition-transform group-open:rotate-180">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </span>
+              </summary>
+              <div
+                class="p-5 pt-0 text-slate-600 dark:text-slate-400 text-sm border-t border-slate-100 dark:border-slate-700/50">
+                <p>
+                  Mastering the Shell. Learn Linux terminal commands and
+                  Windows PowerShell automation.
+                </p>
+              </div>
+            </details>
+
+            <details
+              class="group bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
+              <summary class="flex justify-between items-center p-5 cursor-pointer list-none">
+                <div class="flex items-center gap-4">
+                  <span class="text-blue-600 font-mono font-bold">M4</span>
+                  <h4 class="font-bold text-slate-900 dark:text-white">
+                    System Administration & IT Infrastructure Services
+                  </h4>
+                </div>
+                <span class="text-slate-400 transition-transform group-open:rotate-180">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </span>
+              </summary>
+              <div
+                class="p-5 pt-0 text-slate-600 dark:text-slate-400 text-sm border-t border-slate-100 dark:border-slate-700/50">
+                <p>
+                  Introduction to Active Directory, Fleet Management, and
+                  Cloud Deployment strategies.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- carrer value and proof -->
+  <section class="bg-white dark:bg-slate-950 py-20 transition-colors duration-300 overflow-hidden">
+    <div class="container mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-start">
+        <div>
+          <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-6">
+            Unlock High-Demand IT Roles
+          </h2>
+          <p class="text-slate-600 dark:text-slate-400 mb-10 text-lg">
+            This certification is designed to align with industry standards,
+            preparing you for immediate entry into the enterprise tech
+            workforce.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
+            <div
+              class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex items-center gap-3">
+              <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+              <span class="font-semibold text-slate-800 dark:text-slate-200">IT Support Specialist</span>
+            </div>
+            <div
+              class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex items-center gap-3">
+              <div class="w-2 h-2 rounded-full bg-indigo-500"></div>
+              <span class="font-semibold text-slate-800 dark:text-slate-200">Systems Administrator</span>
+            </div>
+            <div
+              class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex items-center gap-3">
+              <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+              <span class="font-semibold text-slate-800 dark:text-slate-200">Network Technician</span>
+            </div>
+            <div
+              class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex items-center gap-3">
+              <div class="w-2 h-2 rounded-full bg-cyan-500"></div>
+              <span class="font-semibold text-slate-800 dark:text-slate-200">Help Desk Analyst</span>
+            </div>
+          </div>
+
+          <div class="border-t border-slate-100 dark:border-slate-800 pt-8">
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">
+              Curriculum Partners & Recognition
+            </p>
+            <div class="flex flex-wrap gap-8 grayscale opacity-60 dark:invert">
+              <div class="flex items-center gap-2 font-black text-xl text-slate-800">
+                <div class="w-6 h-6 bg-slate-800 rounded"></div>
+                TECH-CORP
+              </div>
+              <div class="flex items-center gap-2 font-serif text-xl text-slate-800">
+                NET-SYSTEMS
+              </div>
+              <div class="flex items-center gap-2 font-mono text-xl text-slate-800 italic">
+                &lt;SEC-ALLIANCE/&gt;
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="relative group perspective-1000">
+            <div
+              class="relative bg-white dark:bg-slate-800 p-4 rounded-lg shadow-2xl border border-slate-200 dark:border-slate-700 transform rotate-2 transition-transform group-hover:rotate-0 duration-500">
+              <div class="border-4 border-double border-slate-100 dark:border-slate-700 p-6 text-center">
+                <div class="w-8 h-8 bg-blue-600 rounded-full mx-auto mb-2 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h4 class="text-[10px] font-bold uppercase tracking-tighter text-blue-600 mb-1">
+                  Official Certification
+                </h4>
+                <p class="text-[14px] font-serif text-slate-800 dark:text-slate-100 font-bold mb-4">
+                  IT Professional Certificate
+                </p>
+                <div class="w-full h-px bg-slate-100 dark:bg-slate-700 mb-4"></div>
+                <div class="flex justify-between items-end">
+                  <div class="w-12 h-1 bg-slate-200 dark:bg-slate-600"></div>
+                  <div class="w-8 h-8 bg-slate-50 dark:bg-slate-900 rounded p-1">
+                    <div class="w-full h-full border border-slate-300 dark:border-slate-600 opacity-20"></div>
+                  </div>
+                  <div class="w-12 h-1 bg-slate-200 dark:bg-slate-600"></div>
+                </div>
+              </div>
+              <div
+                class="absolute -top-4 -right-4 bg-yellow-400 text-yellow-950 font-black px-4 py-2 rounded-full text-xs shadow-lg transform rotate-12">
+                VERIFIED
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-12 relative">
+            <div class="bg-blue-600 rounded-2xl p-8 text-white relative z-10 shadow-xl">
+              <svg class="absolute top-4 right-6 h-12 w-12 text-blue-500 opacity-50" fill="currentColor"
+                viewBox="0 0 32 32">
+                <path
+                  d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+              </svg>
+              <p class="text-lg italic font-medium relative z-10">
+                "Three months after completing this track, I landed a Junior
+                SysAdmin role. The hands-on labs with Linux and Active
+                Directory were exactly what the interviewers asked about."
+              </p>
+              <div class="mt-6 flex items-center gap-4">
+                <div class="w-12 h-12 bg-blue-400 rounded-full border-2 border-white/20">
+                  <img class="w-12 h-12 bg-blue-400 rounded-full border-2 border-white/2"
+                    src="https://th.bing.com/th/id/R.42f7fd526cc94b557961a7d3f4d41994?rik=cQ4oHiZjJolBYA&pid=ImgRaw&r=0"
+                    alt="" />
+                </div>
+                <div>
+                  <p class="font-bold">Jordan Miller</p>
+                  <p class="text-sm text-blue-100">
+                    Now at CloudTech Solutions
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="absolute inset-0 translate-x-4 translate-y-4 bg-slate-200 dark:bg-slate-800 rounded-2xl -z-10">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- pricing -->
+  <section class="bg-slate-50 dark:bg-slate-900 py-20 transition-colors duration-300">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col lg:flex-row gap-16 items-start">
+        <div class="w-full lg:w-1/3">
+          <div
+            class="bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-xl border border-blue-100 dark:border-slate-700 relative overflow-hidden">
+            <div
+              class="absolute top-0 right-0 bg-blue-600 text-white text-[10px] font-bold px-4 py-1 rounded-bl-lg uppercase tracking-widest">
+              Most Popular
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+              Professional Track
+            </h3>
+            <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">
+              Full access to labs and certification.
+            </p>
+
+            <div class="flex items-baseline gap-1 mb-6">
+              <span class="text-4xl font-black text-slate-900 dark:text-white">$39</span>
+              <span class="text-slate-500">/month</span>
+            </div>
+
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300">
+                <svg class="h-5 w-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Unlimited Virtual Lab Access
+              </li>
+              <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300">
+                <svg class="h-5 w-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Verified Digital Certificate
+              </li>
+              <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300">
+                <svg class="h-5 w-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Resume Review Service
               </li>
             </ul>
 
-            <div
-              class="flex flex-col md:flex-row items-center md:ml-4 md:pl-4 md:border-l md:border-white/10 space-y-4 md:space-y-0 md:space-x-4"
-            >
-              <div class="flex items-center space-x-4 text-slate-400">
-                <button class="hover:text-cyan-400 transition-colors">
-                  <svg
-                    class="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                    ></path>
-                  </svg>
-                </button>
-                <div class="relative">
-                  <button class="hover:text-cyan-400 transition-colors">
-                    <svg
-                      class="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-                      ></path>
-                    </svg>
-                  </button>
-                  <span class="absolute -top-1 -right-1 flex h-3 w-3"
-                    ><span
-                      class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"
-                    ></span
-                    ><span
-                      class="relative inline-flex rounded-full h-3 w-3 bg-cyan-500 border-2 border-blue-950"
-                    ></span
-                  ></span>
-                </div>
-              </div>
+            <button
+              class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-500/20 mb-4">
+              Enroll Now
+            </button>
 
-              <div class="flex items-center space-x-4 text-slate-400">
-                <button
-                  id="theme-toggle"
-                  class="p-2 rounded-lg hover:bg-white/10 transition-colors text-cyan-400"
-                >
-                  <svg
-                    id="theme-toggle-light-icon"
-                    class="hidden w-5 h-5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                    ></path>
-                  </svg>
-                  <svg
-                    id="theme-toggle-dark-icon"
-                    class="hidden w-5 h-5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-
-              <div class="flex items-center space-x-3">
-                <button
-                  class="text-slate-300 hover:text-white text-[11px] font-bold uppercase tracking-widest"
-                >
-                  Sign In
-                </button>
-                <button
-                  class="bg-cyan-500 hover:bg-white text-blue-950 px-5 py-2 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-lg shadow-cyan-500/20"
-                >
-                  Get Started
-                </button>
-              </div>
+            <div class="flex justify-center gap-4 grayscale opacity-50 dark:invert">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa"
+                class="h-4" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard"
+                class="h-4" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" class="h-4" />
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
-
-    <!-- hero section -->
-    <section
-      class="relative overflow-hidden bg-white dark:bg-slate-950 py-16 lg:py-24 transition-colors duration-300"
-    >
-      <div
-        class="absolute inset-0 z-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none"
-      >
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern
-              id="it-grid"
-              width="60"
-              height="60"
-              patternUnits="userSpaceOnUse"
-            >
-              <path
-                d="M 60 0 L 0 0 0 60"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="0.5"
-              />
-              <circle cx="0" cy="0" r="1.5" fill="currentColor" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#it-grid)" />
-        </svg>
-      </div>
-
-      <div class="container mx-auto px-6 relative z-10">
-        <div class="flex flex-col lg:flex-row items-center gap-12">
-          <div class="w-full lg:w-3/5 text-left">
-            <span
-              class="inline-flex items-center px-3 py-1 rounded-md text-xs font-bold tracking-widest uppercase bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 mb-6 border border-emerald-200 dark:border-emerald-800"
-            >
-              Industry Recognized Credential
-            </span>
-
-            <h1
-              class="text-4xl md:text-6xl font-black text-slate-900 dark:text-white leading-tight mb-4"
-            >
-              Become an
-              <span
-                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500"
-                >IT Systems Specialist</span
-              >
-            </h1>
-
-            <p
-              class="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl leading-relaxed"
-            >
-              Launch your career in technical support, networking, and security.
-              Learn to manage enterprise hardware, configure secure networks,
-              and troubleshoot complex system architectures from scratch.
-            </p>
-
-            <div class="flex flex-wrap gap-4 mb-10">
-              <a
-                href="#enroll"
-                class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow-lg shadow-blue-500/25 transition-all flex items-center gap-2"
-              >
-                Start Learning
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </a>
-              <button
-                class="px-8 py-4 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-bold rounded-lg hover:bg-slate-50 dark:hover:bg-slate-900 transition-all"
-              >
-                Download Syllabus
-              </button>
-            </div>
-
-            <div
-              class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-slate-200 dark:border-slate-800"
-            >
-              <div>
-                <p
-                  class="text-[10px] uppercase tracking-widest text-slate-400 font-bold mb-1"
-                >
-                  Time to Finish
-                </p>
-                <p class="text-md font-bold text-slate-800 dark:text-slate-200">
-                  ~4 Months
-                </p>
-              </div>
-              <div>
-                <p
-                  class="text-[10px] uppercase tracking-widest text-slate-400 font-bold mb-1"
-                >
-                  Difficulty
-                </p>
-                <p class="text-md font-bold text-slate-800 dark:text-slate-200">
-                  Entry Level
-                </p>
-              </div>
-              <div>
-                <p
-                  class="text-[10px] uppercase tracking-widest text-slate-400 font-bold mb-1"
-                >
-                  Format
-                </p>
-                <p class="text-md font-bold text-slate-800 dark:text-slate-200">
-                  Self-Paced
-                </p>
-              </div>
-              <div>
-                <p
-                  class="text-[10px] uppercase tracking-widest text-slate-400 font-bold mb-1"
-                >
-                  Hands-on
-                </p>
-                <p class="text-md font-bold text-slate-800 dark:text-slate-200">
-                  Virtual Labs
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-full lg:w-2/5 flex justify-center lg:justify-end">
-            <div class="relative group">
-              <div
-                class="w-72 h-96 md:w-80 md:h-[28rem] bg-slate-100 dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl relative overflow-hidden flex flex-col p-4"
-              >
-                <div
-                  class="bg-black rounded-xl flex-1 p-4 font-mono text-[10px] text-emerald-500 overflow-hidden"
-                >
-                  <p class="opacity-50">$ systemctl status network</p>
-                  <p class="text-white mt-1">● active (running)</p>
-                  <p class="mt-2 text-blue-400">
-                    # Initializing secure protocol...
-                  </p>
-                  <div
-                    class="mt-4 w-full bg-slate-800 h-1 rounded overflow-hidden"
-                  >
-                    <div class="bg-emerald-500 h-full w-2/3"></div>
-                  </div>
-                  <div class="grid grid-cols-4 gap-2 mt-6">
-                    <div class="h-8 bg-slate-800 rounded animate-pulse"></div>
-                    <div class="h-8 bg-slate-800 rounded animate-pulse"></div>
-                    <div class="h-8 bg-slate-800 rounded animate-pulse"></div>
-                    <div class="h-8 bg-slate-800 rounded"></div>
-                  </div>
-                </div>
-                <div class="mt-4 flex justify-between items-center px-2">
-                  <div class="flex gap-1">
-                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                    <div class="w-2 h-2 rounded-full bg-amber-500"></div>
-                    <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
-                  </div>
-                  <span
-                    class="text-[10px] font-bold text-slate-500 uppercase tracking-tighter"
-                    >Terminal V.4.0</span
-                  >
-                </div>
-              </div>
-
-              <div
-                class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-8 w-8 text-blue-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- skill + curriculum -->
-    <section
-      class="bg-slate-50 dark:bg-slate-900 py-20 transition-colors duration-300"
-    >
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2
-            class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4"
-          >
-            Master the Modern IT Stack
-          </h2>
-          <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Go beyond theory. Gain hands-on experience with the tools that power
-            global enterprise infrastructure.
+          <p class="text-center text-xs text-slate-400 mt-4 italic">
+            7-day full refund guarantee. Cancel anytime.
           </p>
         </div>
 
-        <div class="grid lg:grid-cols-3 gap-12">
-          <div class="lg:col-span-1">
-            <h3
-              class="text-xl font-bold text-slate-800 dark:text-slate-200 mb-6 flex items-center gap-2"
-            >
-              <span
-                class="w-8 h-8 rounded bg-blue-600 flex items-center justify-center"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
-              </span>
-              Skills you'll gain
-            </h3>
-            <div class="flex flex-wrap gap-2">
-              <span
-                class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 shadow-sm"
-                >Linux CLI</span
-              >
-              <span
-                class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 shadow-sm"
-                >Active Directory</span
-              >
-              <span
-                class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 shadow-sm"
-                >TCP/IP Networking</span
-              >
-              <span
-                class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 shadow-sm"
-                >Cloud Admin (AWS/Azure)</span
-              >
-              <span
-                class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 shadow-sm"
-                >Network Security</span
-              >
-              <span
-                class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 shadow-sm"
-                >Hardware Troubleshooting</span
-              >
-              <span
-                class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 shadow-sm"
-                >Virtualization (VMware)</span
-              >
-            </div>
+        <div class="w-full lg:w-2/3">
+          <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-8">
+            Frequently Asked Questions
+          </h2>
 
-            <div
-              class="mt-12 p-6 bg-blue-600 rounded-2xl text-white shadow-xl shadow-blue-500/20"
-            >
-              <h4 class="font-bold mb-2">Real-World Projects</h4>
-              <ul class="space-y-4 text-sm opacity-90">
-                <li class="flex gap-3">
-                  <span class="font-mono bg-blue-400/30 px-1 rounded">01</span>
-                  Deploy a secure VPN for a remote workforce.
-                </li>
-                <li class="flex gap-3">
-                  <span class="font-mono bg-blue-400/30 px-1 rounded">02</span>
-                  Configure an enterprise-grade Firewall & IDS.
-                </li>
-                <li class="flex gap-3">
-                  <span class="font-mono bg-blue-400/30 px-1 rounded">03</span>
-                  Automate system backups using Python/Bash.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="lg:col-span-2">
-            <h3
-              class="text-xl font-bold text-slate-800 dark:text-slate-200 mb-8"
-            >
-              Course Curriculum
-            </h3>
-
-            <div class="space-y-4">
-              <details
-                class="group bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden"
-                open
-              >
-                <summary
-                  class="flex justify-between items-center p-5 cursor-pointer list-none"
-                >
-                  <div class="flex items-center gap-4">
-                    <span class="text-blue-600 font-mono font-bold">M1</span>
-                    <h4 class="font-bold text-slate-900 dark:text-white">
-                      Technical Support Fundamentals
-                    </h4>
-                  </div>
-                  <span
-                    class="text-slate-400 transition-transform group-open:rotate-180"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </span>
-                </summary>
-                <div
-                  class="p-5 pt-0 text-slate-600 dark:text-slate-400 text-sm border-t border-slate-100 dark:border-slate-700/50"
-                >
-                  <p class="mb-3">
-                    Master the basics of IT infrastructure, hardware assembly,
-                    and the OSI model.
-                  </p>
-                  <ul class="list-disc pl-5 space-y-1">
-                    <li>Assembling a Computer</li>
-                    <li>Installing Operating Systems (Windows & Linux)</li>
-                    <li>Understanding the Internet and IP addresses</li>
-                  </ul>
-                </div>
-              </details>
-
-              <details
-                class="group bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden"
-              >
-                <summary
-                  class="flex justify-between items-center p-5 cursor-pointer list-none"
-                >
-                  <div class="flex items-center gap-4">
-                    <span class="text-blue-600 font-mono font-bold">M2</span>
-                    <h4 class="font-bold text-slate-900 dark:text-white">
-                      Bits and Bytes of Computer Networking
-                    </h4>
-                  </div>
-                  <span
-                    class="text-slate-400 transition-transform group-open:rotate-180"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </span>
-                </summary>
-                <div
-                  class="p-5 pt-0 text-slate-600 dark:text-slate-400 text-sm border-t border-slate-100 dark:border-slate-700/50"
-                >
-                  <p>
-                    Deep dive into TCP/IP, DNS, and DHCP. Learn to configure
-                    routers and switches in virtual lab environments.
-                  </p>
-                </div>
-              </details>
-
-              <details
-                class="group bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden"
-              >
-                <summary
-                  class="flex justify-between items-center p-5 cursor-pointer list-none"
-                >
-                  <div class="flex items-center gap-4">
-                    <span class="text-blue-600 font-mono font-bold">M3</span>
-                    <h4 class="font-bold text-slate-900 dark:text-white">
-                      Operating Systems and You: Becoming a Power User
-                    </h4>
-                  </div>
-                  <span
-                    class="text-slate-400 transition-transform group-open:rotate-180"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </span>
-                </summary>
-                <div
-                  class="p-5 pt-0 text-slate-600 dark:text-slate-400 text-sm border-t border-slate-100 dark:border-slate-700/50"
-                >
-                  <p>
-                    Mastering the Shell. Learn Linux terminal commands and
-                    Windows PowerShell automation.
-                  </p>
-                </div>
-              </details>
-
-              <details
-                class="group bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden"
-              >
-                <summary
-                  class="flex justify-between items-center p-5 cursor-pointer list-none"
-                >
-                  <div class="flex items-center gap-4">
-                    <span class="text-blue-600 font-mono font-bold">M4</span>
-                    <h4 class="font-bold text-slate-900 dark:text-white">
-                      System Administration & IT Infrastructure Services
-                    </h4>
-                  </div>
-                  <span
-                    class="text-slate-400 transition-transform group-open:rotate-180"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </span>
-                </summary>
-                <div
-                  class="p-5 pt-0 text-slate-600 dark:text-slate-400 text-sm border-t border-slate-100 dark:border-slate-700/50"
-                >
-                  <p>
-                    Introduction to Active Directory, Fleet Management, and
-                    Cloud Deployment strategies.
-                  </p>
-                </div>
-              </details>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- carrer value and proof -->
-    <section
-      class="bg-white dark:bg-slate-950 py-20 transition-colors duration-300 overflow-hidden"
-    >
-      <div class="container mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-16 items-start">
-          <div>
-            <h2
-              class="text-3xl font-extrabold text-slate-900 dark:text-white mb-6"
-            >
-              Unlock High-Demand IT Roles
-            </h2>
-            <p class="text-slate-600 dark:text-slate-400 mb-10 text-lg">
-              This certification is designed to align with industry standards,
-              preparing you for immediate entry into the enterprise tech
-              workforce.
-            </p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
-              <div
-                class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex items-center gap-3"
-              >
-                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                <span class="font-semibold text-slate-800 dark:text-slate-200"
-                  >IT Support Specialist</span
-                >
-              </div>
-              <div
-                class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex items-center gap-3"
-              >
-                <div class="w-2 h-2 rounded-full bg-indigo-500"></div>
-                <span class="font-semibold text-slate-800 dark:text-slate-200"
-                  >Systems Administrator</span
-                >
-              </div>
-              <div
-                class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex items-center gap-3"
-              >
-                <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
-                <span class="font-semibold text-slate-800 dark:text-slate-200"
-                  >Network Technician</span
-                >
-              </div>
-              <div
-                class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex items-center gap-3"
-              >
-                <div class="w-2 h-2 rounded-full bg-cyan-500"></div>
-                <span class="font-semibold text-slate-800 dark:text-slate-200"
-                  >Help Desk Analyst</span
-                >
-              </div>
-            </div>
-
-            <div class="border-t border-slate-100 dark:border-slate-800 pt-8">
-              <p
-                class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6"
-              >
-                Curriculum Partners & Recognition
+          <div class="grid gap-6">
+            <div>
+              <h4 class="font-bold text-slate-800 dark:text-slate-200 mb-2">
+                Do I need prior IT experience?
+              </h4>
+              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                No. This program starts with the basics of hardware and
+                networking. While a passion for technology helps, we guide you
+                from square one.
               </p>
-              <div
-                class="flex flex-wrap gap-8 grayscale opacity-60 dark:invert"
-              >
-                <div
-                  class="flex items-center gap-2 font-black text-xl text-slate-800"
-                >
-                  <div class="w-6 h-6 bg-slate-800 rounded"></div>
-                  TECH-CORP
-                </div>
-                <div
-                  class="flex items-center gap-2 font-serif text-xl text-slate-800"
-                >
-                  NET-SYSTEMS
-                </div>
-                <div
-                  class="flex items-center gap-2 font-mono text-xl text-slate-800 italic"
-                >
-                  &lt;SEC-ALLIANCE/&gt;
-                </div>
-              </div>
             </div>
-          </div>
 
-          <div class="relative">
-            <div class="relative group perspective-1000">
+            <div class="pt-6 border-t border-slate-200 dark:border-slate-800">
+              <h4 class="font-bold text-slate-800 dark:text-slate-200 mb-2">
+                Is the certificate industry recognized?
+              </h4>
+              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                Yes. Our curriculum is mapped to CompTIA A+ standards and is
+                recognized by our network of over 50+ hiring partners in the
+                tech sector.
+              </p>
+            </div>
+
+            <div class="pt-6 border-t border-slate-200 dark:border-slate-800">
+              <h4 class="font-bold text-slate-800 dark:text-slate-200 mb-2">
+                How do the virtual labs work?
+              </h4>
+              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                You will get access to an in-browser cloud environment where
+                you can practice Linux commands and Windows Server
+                configurations without installing anything on your own
+                machine.
+              </p>
+            </div>
+
+            <div class="pt-10">
               <div
-                class="relative bg-white dark:bg-slate-800 p-4 rounded-lg shadow-2xl border border-slate-200 dark:border-slate-700 transform rotate-2 transition-transform group-hover:rotate-0 duration-500"
-              >
-                <div
-                  class="border-4 border-double border-slate-100 dark:border-slate-700 p-6 text-center"
-                >
-                  <div
-                    class="w-8 h-8 bg-blue-600 rounded-full mx-auto mb-2 flex items-center justify-center"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-4 w-4 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </div>
-                  <h4
-                    class="text-[10px] font-bold uppercase tracking-tighter text-blue-600 mb-1"
-                  >
-                    Official Certification
+                class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                  <h4 class="font-bold text-blue-900 dark:text-blue-200">
+                    Still have questions?
                   </h4>
-                  <p
-                    class="text-[14px] font-serif text-slate-800 dark:text-slate-100 font-bold mb-4"
-                  >
-                    IT Professional Certificate
+                  <p class="text-sm text-blue-700 dark:text-blue-400">
+                    Our career advisors are available 24/7 for a chat.
                   </p>
-                  <div
-                    class="w-full h-px bg-slate-100 dark:bg-slate-700 mb-4"
-                  ></div>
-                  <div class="flex justify-between items-end">
-                    <div class="w-12 h-1 bg-slate-200 dark:bg-slate-600"></div>
-                    <div
-                      class="w-8 h-8 bg-slate-50 dark:bg-slate-900 rounded p-1"
-                    >
-                      <div
-                        class="w-full h-full border border-slate-300 dark:border-slate-600 opacity-20"
-                      ></div>
-                    </div>
-                    <div class="w-12 h-1 bg-slate-200 dark:bg-slate-600"></div>
-                  </div>
                 </div>
-                <div
-                  class="absolute -top-4 -right-4 bg-yellow-400 text-yellow-950 font-black px-4 py-2 rounded-full text-xs shadow-lg transform rotate-12"
-                >
-                  VERIFIED
-                </div>
+                <button
+                  class="px-6 py-2 bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-400 font-bold rounded-lg border border-blue-200 dark:border-blue-900 shadow-sm">
+                  Contact Support
+                </button>
               </div>
-            </div>
-
-            <div class="mt-12 relative">
-              <div
-                class="bg-blue-600 rounded-2xl p-8 text-white relative z-10 shadow-xl"
-              >
-                <svg
-                  class="absolute top-4 right-6 h-12 w-12 text-blue-500 opacity-50"
-                  fill="currentColor"
-                  viewBox="0 0 32 32"
-                >
-                  <path
-                    d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"
-                  />
-                </svg>
-                <p class="text-lg italic font-medium relative z-10">
-                  "Three months after completing this track, I landed a Junior
-                  SysAdmin role. The hands-on labs with Linux and Active
-                  Directory were exactly what the interviewers asked about."
-                </p>
-                <div class="mt-6 flex items-center gap-4">
-                  <div
-                    class="w-12 h-12 bg-blue-400 rounded-full border-2 border-white/20"
-                  >
-                    <img
-                      class="w-12 h-12 bg-blue-400 rounded-full border-2 border-white/2"
-                      src="https://th.bing.com/th/id/R.42f7fd526cc94b557961a7d3f4d41994?rik=cQ4oHiZjJolBYA&pid=ImgRaw&r=0"
-                      alt=""
-                    />
-                  </div>
-                  <div>
-                    <p class="font-bold">Jordan Miller</p>
-                    <p class="text-sm text-blue-100">
-                      Now at CloudTech Solutions
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="absolute inset-0 translate-x-4 translate-y-4 bg-slate-200 dark:bg-slate-800 rounded-2xl -z-10"
-              ></div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- pricing -->
-    <section
-      class="bg-slate-50 dark:bg-slate-900 py-20 transition-colors duration-300"
-    >
-      <div class="container mx-auto px-6">
-        <div class="flex flex-col lg:flex-row gap-16 items-start">
-          <div class="w-full lg:w-1/3">
-            <div
-              class="bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-xl border border-blue-100 dark:border-slate-700 relative overflow-hidden"
-            >
-              <div
-                class="absolute top-0 right-0 bg-blue-600 text-white text-[10px] font-bold px-4 py-1 rounded-bl-lg uppercase tracking-widest"
-              >
-                Most Popular
-              </div>
-
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
-                Professional Track
-              </h3>
-              <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">
-                Full access to labs and certification.
-              </p>
-
-              <div class="flex items-baseline gap-1 mb-6">
-                <span class="text-4xl font-black text-slate-900 dark:text-white"
-                  >$39</span
-                >
-                <span class="text-slate-500">/month</span>
-              </div>
-
-              <ul class="space-y-4 mb-8">
-                <li
-                  class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"
-                >
-                  <svg
-                    class="h-5 w-5 text-emerald-500"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Unlimited Virtual Lab Access
-                </li>
-                <li
-                  class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"
-                >
-                  <svg
-                    class="h-5 w-5 text-emerald-500"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Verified Digital Certificate
-                </li>
-                <li
-                  class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"
-                >
-                  <svg
-                    class="h-5 w-5 text-emerald-500"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Resume Review Service
-                </li>
-              </ul>
-
-              <button
-                class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-500/20 mb-4"
-              >
-                Enroll Now
-              </button>
-
-              <div
-                class="flex justify-center gap-4 grayscale opacity-50 dark:invert"
-              >
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg"
-                  alt="Visa"
-                  class="h-4"
-                />
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
-                  alt="Mastercard"
-                  class="h-4"
-                />
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
-                  alt="PayPal"
-                  class="h-4"
-                />
-              </div>
+  <!-- Footer -->
+  <footer class="bg-blue-950 border-t border-blue-900/50 font-sans">
+    <div class="mx-auto w-full max-w-7xl p-8 py-12 lg:py-16">
+      <div class="md:flex md:justify-between">
+        <div class="mb-10 md:mb-0 max-w-sm">
+          <a href="#" class="flex items-center mb-6 group">
+            <div class="bg-cyan-500 p-1.5 rounded-lg group-hover:shadow-[0_0_20px_rgba(6,182,212,0.5)] transition-all">
+              <svg class="w-5 h-5 text-blue-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 10V3L4 14h7v7l9-11h-7z">
+                </path>
+              </svg>
             </div>
-            <p class="text-center text-xs text-slate-400 mt-4 italic">
-              7-day full refund guarantee. Cancel anytime.
-            </p>
+            <span class="text-lg font-black tracking-tighter text-white uppercase italic">NEON<span
+                class="text-cyan-400">LABS</span></span>
+          </a>
+          <p class="text-blue-200/60 text-sm leading-relaxed mb-6">
+            Master the stacks used by top tech companies. Project-based
+            learning designed to get you hired as a software engineer.
+          </p>
+          <div class="flex gap-4">
+            <div class="flex flex-col">
+              <span class="text-white font-bold text-lg">15k+</span>
+              <span class="text-blue-300 text-xs uppercase tracking-tighter">Active Students</span>
+            </div>
+            <div class="w-px h-10 bg-blue-800"></div>
+            <div class="flex flex-col">
+              <span class="text-white font-bold text-lg">4.9/5</span>
+              <span class="text-blue-300 text-xs uppercase tracking-tighter">Course Rating</span>
+            </div>
           </div>
+        </div>
 
-          <div class="w-full lg:w-2/3">
-            <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-8">
-              Frequently Asked Questions
+        <div class="grid grid-cols-2 gap-8 sm:gap-16 sm:grid-cols-3">
+          <div>
+            <h2 class="mb-6 text-sm font-bold text-cyan-400 uppercase tracking-widest">
+              Syllabus
             </h2>
-
-            <div class="grid gap-6">
-              <div>
-                <h4 class="font-bold text-slate-800 dark:text-slate-200 mb-2">
-                  Do I need prior IT experience?
-                </h4>
-                <p
-                  class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed"
-                >
-                  No. This program starts with the basics of hardware and
-                  networking. While a passion for technology helps, we guide you
-                  from square one.
-                </p>
-              </div>
-
-              <div class="pt-6 border-t border-slate-200 dark:border-slate-800">
-                <h4 class="font-bold text-slate-800 dark:text-slate-200 mb-2">
-                  Is the certificate industry recognized?
-                </h4>
-                <p
-                  class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed"
-                >
-                  Yes. Our curriculum is mapped to CompTIA A+ standards and is
-                  recognized by our network of over 50+ hiring partners in the
-                  tech sector.
-                </p>
-              </div>
-
-              <div class="pt-6 border-t border-slate-200 dark:border-slate-800">
-                <h4 class="font-bold text-slate-800 dark:text-slate-200 mb-2">
-                  How do the virtual labs work?
-                </h4>
-                <p
-                  class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed"
-                >
-                  You will get access to an in-browser cloud environment where
-                  you can practice Linux commands and Windows Server
-                  configurations without installing anything on your own
-                  machine.
-                </p>
-              </div>
-
-              <div class="pt-10">
-                <div
-                  class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6"
-                >
-                  <div>
-                    <h4 class="font-bold text-blue-900 dark:text-blue-200">
-                      Still have questions?
-                    </h4>
-                    <p class="text-sm text-blue-700 dark:text-blue-400">
-                      Our career advisors are available 24/7 for a chat.
-                    </p>
-                  </div>
-                  <button
-                    class="px-6 py-2 bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-400 font-bold rounded-lg border border-blue-200 dark:border-blue-900 shadow-sm"
-                  >
-                    Contact Support
-                  </button>
-                </div>
-              </div>
-            </div>
+            <ul class="text-blue-100/80 font-medium space-y-4">
+              <li>
+                <a href="#" class="hover:text-white transition-colors">Web Development</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">Backend Systems</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">Mobile Engineering</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">DevOps Roadmap</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-bold text-cyan-400 uppercase tracking-widest">
+              Student Portal
+            </h2>
+            <ul class="text-blue-100/80 font-medium space-y-4">
+              <li>
+                <a href="#" class="hover:text-white transition-colors">My Dashboard</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">Discord Community</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">Job Board</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">Career Coaching</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-bold text-cyan-400 uppercase tracking-widest">
+              Institutional
+            </h2>
+            <ul class="text-blue-100/80 font-medium space-y-4">
+              <li>
+                <a href="#" class="hover:text-white transition-colors">Verify Certificate</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">Partnerships</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-blue-950 border-t border-blue-900/50 font-sans">
-      <div class="mx-auto w-full max-w-7xl p-8 py-12 lg:py-16">
-        <div class="md:flex md:justify-between">
-          <div class="mb-10 md:mb-0 max-w-sm">
-            <a href="#" class="flex items-center mb-6 group">
-              <div
-                class="bg-cyan-500 p-1.5 rounded-lg group-hover:shadow-[0_0_20px_rgba(6,182,212,0.5)] transition-all"
-              >
-                <svg
-                  class="w-5 h-5 text-blue-950"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="3"
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  ></path>
-                </svg>
-              </div>
-              <span
-                class="text-lg font-black tracking-tighter text-white uppercase italic"
-                >NEON<span class="text-cyan-400">LABS</span></span
-              >
-            </a>
-            <p class="text-blue-200/60 text-sm leading-relaxed mb-6">
-              Master the stacks used by top tech companies. Project-based
-              learning designed to get you hired as a software engineer.
-            </p>
-            <div class="flex gap-4">
-              <div class="flex flex-col">
-                <span class="text-white font-bold text-lg">15k+</span>
-                <span class="text-blue-300 text-xs uppercase tracking-tighter"
-                  >Active Students</span
-                >
-              </div>
-              <div class="w-px h-10 bg-blue-800"></div>
-              <div class="flex flex-col">
-                <span class="text-white font-bold text-lg">4.9/5</span>
-                <span class="text-blue-300 text-xs uppercase tracking-tighter"
-                  >Course Rating</span
-                >
-              </div>
-            </div>
-          </div>
+      <hr class="my-10 border-blue-900" />
 
-          <div class="grid grid-cols-2 gap-8 sm:gap-16 sm:grid-cols-3">
-            <div>
-              <h2
-                class="mb-6 text-sm font-bold text-cyan-400 uppercase tracking-widest"
-              >
-                Syllabus
-              </h2>
-              <ul class="text-blue-100/80 font-medium space-y-4">
-                <li>
-                  <a href="#" class="hover:text-white transition-colors"
-                    >Web Development</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="hover:text-white transition-colors"
-                    >Backend Systems</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="hover:text-white transition-colors"
-                    >Mobile Engineering</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="hover:text-white transition-colors"
-                    >DevOps Roadmap</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2
-                class="mb-6 text-sm font-bold text-cyan-400 uppercase tracking-widest"
-              >
-                Student Portal
-              </h2>
-              <ul class="text-blue-100/80 font-medium space-y-4">
-                <li>
-                  <a href="#" class="hover:text-white transition-colors"
-                    >My Dashboard</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="hover:text-white transition-colors"
-                    >Discord Community</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="hover:text-white transition-colors"
-                    >Job Board</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="hover:text-white transition-colors"
-                    >Career Coaching</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2
-                class="mb-6 text-sm font-bold text-cyan-400 uppercase tracking-widest"
-              >
-                Institutional
-              </h2>
-              <ul class="text-blue-100/80 font-medium space-y-4">
-                <li>
-                  <a href="#" class="hover:text-white transition-colors"
-                    >Verify Certificate</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="hover:text-white transition-colors"
-                    >Privacy Policy</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="hover:text-white transition-colors"
-                    >Terms of Service</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="hover:text-white transition-colors"
-                    >Partnerships</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <span class="text-sm text-blue-300/50">
+          © 2026
+          <a href="#" class="hover:text-cyan-400 transition-colors">neonlabs</a>. All Rights Reserved.
+        </span>
 
-        <hr class="my-10 border-blue-900" />
-
-        <div
-          class="flex flex-col md:flex-row items-center justify-between gap-6"
-        >
-          <span class="text-sm text-blue-300/50">
-            © 2026
-            <a href="#" class="hover:text-cyan-400 transition-colors"
-              >neonlabs</a
-            >. All Rights Reserved.
-          </span>
-
-          <div class="flex space-x-5">
-            <a
-              href="#"
-              class="text-blue-300 hover:text-cyan-400 transition-all transform hover:-translate-y-1"
-            >
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                />
-              </svg>
-            </a>
-            <a
-              href="#"
-              class="text-blue-300 hover:text-cyan-400 transition-all transform hover:-translate-y-1"
-            >
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                />
-              </svg>
-            </a>
-          </div>
+        <div class="flex space-x-5">
+          <a href="#" class="text-blue-300 hover:text-cyan-400 transition-all transform hover:-translate-y-1">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
+          </a>
+          <a href="#" class="text-blue-300 hover:text-cyan-400 transition-all transform hover:-translate-y-1">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script>
-      const toggleMenu = (btnId, menuId) => {
-        const btn = document.getElementById(btnId);
-        const menu = document.getElementById(menuId);
-        btn.addEventListener("click", (e) => {
-          e.stopPropagation();
-          menu.classList.toggle("hidden");
-        });
-      };
+  <!-- for notification -->
+  <script>
+    function toggleNotifications() {
+      const sidebar = document.getElementById("notification-sidebar");
+      const overlay = document.getElementById("notification-overlay");
 
-      toggleMenu("courses-btn", "courses-menu");
-      toggleMenu("programs-btn", "programs-menu");
-      toggleMenu("menu-toggle", "navbar-menu");
+      sidebar.classList.toggle("translate-x-full");
+      overlay.classList.toggle("hidden");
 
-      window.addEventListener("click", () => {
-        document.getElementById("courses-menu").classList.add("hidden");
-        document.getElementById("programs-menu").classList.add("hidden");
+      // Prevent scrolling when open
+      document.body.classList.toggle("overflow-hidden");
+    }
+  </script>
+
+  <script>
+    const toggleMenu = (btnId, menuId) => {
+      const btn = document.getElementById(btnId);
+      const menu = document.getElementById(menuId);
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        menu.classList.toggle("hidden");
       });
+    };
 
-      const themeToggleBtn = document.getElementById("theme-toggle");
-      const darkIcon = document.getElementById("theme-toggle-dark-icon");
-      const lightIcon = document.getElementById("theme-toggle-light-icon");
+    toggleMenu("courses-btn", "courses-menu");
+    toggleMenu("programs-btn", "programs-menu");
+    toggleMenu("menu-toggle", "navbar-menu");
 
-      // 1. Function to sync the icons based on the current class
-      const reflectTheme = () => {
-        const isDark = document.documentElement.classList.contains("dark");
-        if (isDark) {
-          darkIcon.classList.add("hidden");
-          lightIcon.classList.remove("hidden");
-        } else {
-          lightIcon.classList.add("hidden");
-          darkIcon.classList.remove("hidden");
-        }
-      };
+    window.addEventListener("click", () => {
+      document.getElementById("courses-menu").classList.add("hidden");
+      document.getElementById("programs-menu").classList.add("hidden");
+    });
 
-      // 2. Initial Run: Set theme and sync icons
-      if (
-        localStorage.getItem("color-theme") === "dark" ||
-        (!("color-theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
-        document.documentElement.classList.add("dark");
+    const themeToggleBtn = document.getElementById("theme-toggle");
+    const darkIcon = document.getElementById("theme-toggle-dark-icon");
+    const lightIcon = document.getElementById("theme-toggle-light-icon");
+
+    // 1. Function to sync the icons based on the current class
+    const reflectTheme = () => {
+      const isDark = document.documentElement.classList.contains("dark");
+      if (isDark) {
+        darkIcon.classList.add("hidden");
+        lightIcon.classList.remove("hidden");
       } else {
-        document.documentElement.classList.remove("dark");
+        lightIcon.classList.add("hidden");
+        darkIcon.classList.remove("hidden");
       }
-      reflectTheme(); // Sync icons immediately on load
+    };
 
-      // 3. Toggle Event Listener
-      themeToggleBtn.addEventListener("click", () => {
-        // Toggle the 'dark' class
-        document.documentElement.classList.toggle("dark");
+    // 2. Initial Run: Set theme and sync icons
+    if (
+      localStorage.getItem("color-theme") === "dark" ||
+      (!("color-theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    reflectTheme(); // Sync icons immediately on load
 
-        // Save the new state to localStorage
-        if (document.documentElement.classList.contains("dark")) {
-          localStorage.setItem("color-theme", "dark");
-        } else {
-          localStorage.setItem("color-theme", "light");
-        }
+    // 3. Toggle Event Listener
+    themeToggleBtn.addEventListener("click", () => {
+      // Toggle the 'dark' class
+      document.documentElement.classList.toggle("dark");
 
-        // Update icons to match the new state
-        reflectTheme();
-      });
-    </script>
+      // Save the new state to localStorage
+      if (document.documentElement.classList.contains("dark")) {
+        localStorage.setItem("color-theme", "dark");
+      } else {
+        localStorage.setItem("color-theme", "light");
+      }
 
-    <script src="/src/script/script.js"></script>
+      // Update icons to match the new state
+      reflectTheme();
+    });
+  </script>
 
-    <script src="https://unpkg.com/flowbite@latest/dist/flowbite.min.js"></script>
-    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
-  </body>
+  <script src="/src/script/script.js"></script>
+
+  <script src="https://unpkg.com/flowbite@latest/dist/flowbite.min.js"></script>
+  <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+</body>
+
 </html>
